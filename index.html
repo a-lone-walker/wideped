@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WIDEPED - Empowering the Physically Challenged</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3b3b98, #38ef7d);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+        }
+        header:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/butterfly_bg.png') no-repeat center;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+        header p {
+            margin: 1rem 0 0;
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        nav {
+            background: #222;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #38ef7d;
+        }
+        main {
+            padding: 2rem;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        section h2 {
+            font-size: 1.8rem;
+            color: #38ef7d;
+            margin-bottom: 1rem;
+        }
+        section p, section ul, section ol {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        section img {
+            display: block;
+            margin: 1rem auto;
+            max-width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        section img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            text-align: center;
+            color: #38ef7d;
+        }
+        .highlight {
+            color: #ffdd59;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 30%;
+            max-width: 300px;
+            cursor: pointer;
+            position: relative;
+        }
+        .gallery img:hover::after {
+            content: attr(alt);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            section img {
+                width: 100%;
+            }
+            .gallery img {
+                width: 45%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to WIDEPED</h1>
+        <p>Empowering Physically Challenged Individuals</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#future">Future Enhancements</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>WIDEPED is an advanced gesture-based home automation system designed to empower individuals with severe physical challenges. Developed by the talented students of <strong>Delhi Public School, Nadergul</strong>, WIDEPED bridges the gap between disability and independence by enabling users to control home appliances effortlessly with head or hand gestures. The system also integrates emergency communication features for critical situations, ensuring the safety and well-being of its users.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li><span class="highlight">Gesture-Based Control:</span> Control devices like lights, fans, and buzzers using simple gestures.</li>
+                <li><span class="highlight">Emergency Support:</span> Trigger an emergency SMS or call using a GSM module.</li>
+                <li><span class="highlight">Visual Feedback:</span> Real-time visual cues through an OLED display.</li>
+                <li><span class="highlight">Audio Assistance:</span> Audio prompts for intuitive navigation.</li>
+                <li><span class="highlight">Wireless Communication:</span> Seamless ESP-NOW connectivity.</li>
+                <li><span class="highlight">Portable and Affordable:</span> Compact, easy-to-install, and budget-friendly.</li>
+            </ul>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How Does It Work?</h2>
+            <ol>
+                <li><strong>Sensors:</strong> Detect gestures using the MPU6050 accelerometer.</li>
+                <li><strong>Processing:</strong> ESP32 processes signals and decides actions.</li>
+                <li><strong>Communication:</strong> ESP-NOW transmits signals wirelessly.</li>
+                <li><strong>Appliance Control:</strong> The receiver module activates appliances.</li>
+                <li><strong>Emergency Feature:</strong> GSM module handles emergency calls or messages.</li>
+                <li><strong>Feedback Mechanisms:</strong> OLED for visuals, audio prompts, and LCD for status updates.</li>
+            </ol>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="images/IMG20250124191340.jpg" alt="System Internal Components">
+                <img src="images/IMG20250127103300.jpg" alt="System Overview">
+                <img src="images/IMG20250127133904.jpg" alt="Prototype Image">
+                <img src="images/IMG20250127133947.jpg" alt="Gesture Controller">
+                <img src="images/IMG20250127135252.jpg" alt="OLED Display">
+                <img src="images/IMG20250127135304.jpg" alt="LCD Display">
+                <img src="images/project-1.jpg" alt="Student Working on Project">
+                <img src="images/project-2.jpg" alt="Hardware Assembly">
+                <img src="images/project-3.jpg" alt="Student with Final Prototype">
+            </div>
+        </section>
+
+        <section id="benefits">
+            <h2>Benefits</h2>
+            <ul>
+                <li><span class="highlight">Empowers Users:</span> Provides autonomy for physically challenged individuals.</li>
+                <li><span class="highlight">Enhanced Safety:</span> Quick emergency communication.</li>
+                <li><span class="highlight">Cost-Effective:</span> Budget-friendly and easy to install.</li>
+                <li><span class="highlight">Inclusive Design:</span> Accessible for everyone.</li>
+            </ul>
+        </section>
+
+        <section id="future">
+            <h2>Future Enhancements</h2>
+            <ul>
+                <li>Voice command integration for easier control.</li>
+                <li>Smartphone app for remote monitoring.</li>
+                <li>Real-time IoT dashboard for caregivers.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 WIDEPED Project. Developed by Delhi Public School, Nadergul. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+ 
