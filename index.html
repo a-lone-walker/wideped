@@ -126,9 +126,17 @@
             margin-top: 2rem;
         }
 
-        .gallery-wrapper {
+        .gallery-work {
             display: flex;
-            animation: circularScroll 50s linear infinite;
+            overflow: hidden;
+            position: relative;
+            height: auto;
+            margin-top: 2rem;
+        }
+
+        .gallery-wrapper-work {
+            display: flex;
+            animation: circularScrollReverse 40s linear infinite;
         }
 
         .gallery img {
@@ -271,6 +279,8 @@
                     <img src="lcd.jpg" alt="LCD Display">
                     <img src="oled.jpg" alt="OLED Display">
                 </div>
+            </div>
+            <div class="gallery-work">
                 <div class="gallery-wrapper">
                     <img src="project-1.jpg" alt="Student Working on Project">
                     <img src="project-8.jpg" alt="Student Working on Project">
